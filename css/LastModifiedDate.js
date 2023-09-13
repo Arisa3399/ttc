@@ -6,4 +6,4 @@ lmDate=new Date(document.lastModified);
 lmY=lmDate.getFullYear();
 lmM=lmDate.getMonth()+1;
 lmD=lmDate.getDate();
-document.write("ÅIXV“úF",lmY,"”N",lmM,"Œ",lmD,"“ú");
+document.write("æœ€çµ‚æ›´æ–°æ—¥ï¼š",lmY,"å¹´",lmM,"æœˆ",lmD,"æ—¥");
