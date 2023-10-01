@@ -1,30 +1,12 @@
-(()=>{
-  function Asset(options){
+
+export class Asset{
+  constructor(options){
     this.options = options || {}
     this.loads()
   }
 
-  Asset.prototype.loads = function(){
-    for(const file_data of this.options.files){
-      this.load(file_data)
-    }
-  }
-  Asset.prototype.load = function(data){
-    const xhr = new XMLHttpRequest()
-    xhr.open('get' , data.file , true)
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.onload = this.loaded.bind(this , data)
-    xhr.send()
-  }
-  Asset.prototype.loaded = function(data , e){
-    const html = e.target.response
-    const elm = document.querySelector(data.selector)
-    
-    elm.insertAdjacentHTML('beforeend' , html)
-  }
-
-  new Asset({
-    files : [
+  get files(){
+    return [
       {
         name : 'header',
         selector : 'header',
@@ -51,5 +33,24 @@
         file : 'pages/index.html',
       },
     ]
-  })
-})()
+  }
+
+  loads = function(){
+    for(const file_data of this.files){
+      this.load(file_data)
+    }
+  }
+  load = function(data){
+    const xhr = new XMLHttpRequest()
+    xhr.open('get' , data.file , true)
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.onload = this.loaded.bind(this , data)
+    xhr.send()
+  }
+  loaded = function(data , e){
+    const html = e.target.response
+    const elm = document.querySelector(data.selector)
+    
+    elm.insertAdjacentHTML('beforeend' , html)
+  }
+}

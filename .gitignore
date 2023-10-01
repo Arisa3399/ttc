@@ -3,5 +3,11 @@ Thumbs.db
 
 /trash/
 /data/
-/plugins/
+
+
+*.bak
+
+.vscode
+
+index_.html
 
