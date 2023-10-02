@@ -3,14 +3,10 @@ Thumbs.db
 
 /trash/
 /data/
-<<<<<<< HEAD
+/plugins/
 
 *.bak
 
 .vscode
 
 index_.html
-=======
-/plugins/
-
->>>>>>> yugeta
