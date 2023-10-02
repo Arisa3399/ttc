@@ -1,0 +1,73 @@
+.table1{ /* テーブル1(上側リンクメニュー)の全体設定 */
+	margin:0px;						/* 外側余白指定. 上下左右共に余白無し */
+	padding:0px;					/* 内側余白指定. 上下左右共に余白無し */
+	border-collapse:collapse;		/* 境界線表示方法指定.collapse:隣接境界線結合. separate:隣接境界線分離 */
+	border-spacing:0px;				/* 境界線間隔指定. 『border-collapse:collapse』で有効 */
+	empty-cells:show;				/* 空セル境界線の表示・非表示指定. show or hide */
+	font-family:monospace;			/* フォント種類指定.sans-serif, serif, cursive, fantasy, monospace */
+	}
+.table1 td{ /* テーブル1の td 要素設定 */
+	border:0px solid #900;			/* 境界線の太さ・色・スタイルを一括指定 */
+/*	background-color:#fff; */		/* 背景色設定 */
+	background-image:url("../images/t_menu_1.jpg");	/* 背景画像ファイルの指定 */
+	background-repeat:no-repeat;	/* 背景画像の表示繰り返し方法 */
+	background-position:center;		/* 背景画像の表示位置 */
+	text-align:center;				/* 文字揃え設定 */
+	width: 190px;					/* セル横幅指定,px,em, %. 初期値はauto */
+	height: 40px;					/* セル高さ指定,px,em, %. 初期値はauto */
+	}
+.table1 a{ /* テーブル1の リンク設定 */
+	color:#444;						/* 文字色指定 */
+	width: 190px;					/* セル横幅指定,px,em, %. 初期値はauto */
+	height: 40px;					/* セル高さ指定,px,em, %. 初期値はauto */
+	line-height: 40px;				/* 行高さ指定. 先述heightと同じ高さにすると文字が縦方向の中央になる */
+	text-decoration:none;			/* ライン装飾指定. underline, overline, line-through, none */
+	letter-spacing:8px;				/* 文字間隔指定. px, pt, em, % */
+	display:block;
+	}
+.table1 a:visited{ /* 読込済リンク設定 */
+	color:#444;
+	}
+.table1 a:hover{ /* テーブル1の マウスオーバー設定 */
+	color:#000000;					/* 変化する文字色 */
+/*	background:#ffffff; */			/* 変化する背景色 */
+	background-image:url("../images/t_menu_2.jpg");	/* 背景画像ファイルの指定 */
+	background-repeat:no-repeat;	/* 背景画像の表示繰り返し方法 */
+	background-position:center;		/* 背景画像の表示位置 */
+	text-decoration:none;			/* 文字飾り */
+	font-weight:normal;				/* フォント太さ指定.normal,bold,lighter,bolder,100,200,300,...,900 */
+	}
+/* ----------------------------------------------------------------------- */
+.table2{ /* テーブル2(メイン画像)の全体設定 */
+	margin:0px;						/* 外側余白指定. 上下左右共に余白無し */
+	padding:0px;					/* 内側余白指定. 上下左右共に余白無し */
+	border-collapse:collapse;		/* 境界線表示方法指定.collapse:隣接境界線結合. separate:隣接境界線分離 */
+	border-spacing:1px;				/* 境界線間隔指定. 『border-collapse:collapse』で有効 */
+	empty-cells:show;				/* 空セル境界線の表示・非表示指定. show or hide */
+	}
+.table2 td{ /* テーブル2の td 要素設定 */
+	border:1px solid #fff;			/* 境界線の太さ・色・スタイルを一括指定 */
+	background-color:#fff;			/* 背景色設定 */
+	background-repeat:no-repeat;	/* 背景画像の表示繰り返し方法 */
+	background-position:center;		/* 背景画像の表示位置 */
+	width:160px;					/* セル横幅指定,px,em, %. 初期値はauto */
+	height:90px;					/* セル高さ指定,px,em, %. 初期値はauto */
+	}
+.a1{ /* 一番左のセル設定 */
+	background-image:url(../images/bckimg1.jpg);	/* 背景画像ファイルの指定 */
+	}
+.a2{ /* 左から2番目のセル設定 */
+	background-image:url(../images/bckimg2.jpg);
+	}
+.a3{ /* 左から3番目のセル設定 */
+	background-image:url(../images/bckimg3.jpg);
+	}
+.a4{ /* 左から4番目のセル設定 */
+	background-image:url(../images/bckimg4.jpg);
+	}
+.a5{ /* 右から2番目のセル設定 */
+	background-image:url(../images/bckimg5.jpg);
+	}
+.a6{ /* 一番右のセル設定 */
+	background-image:url(../images/bckimg6.jpg);
+	}

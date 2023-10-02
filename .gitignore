@@ -5,8 +5,10 @@ Thumbs.db
 /data/
 /plugins/
 
+
 *.bak
 
 .vscode
 
 index_.html
+
