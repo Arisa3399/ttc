@@ -10,22 +10,22 @@ export class Asset{
       {
         name : 'header',
         selector : 'header',
-        file : 'assets/header.html',
+        file : 'assets/html/header.html',
       },
       {
         name : 'footer',
         selector : 'footer',
-        file : 'assets/footer.html',
+        file : 'assets/html/footer.html',
       },
       {
         name : 'menu_left',
         selector : '#sideWrap1',
-        file : 'assets/menu_left.html',
+        file : 'assets/html/menu_left.html',
       },
       {
         name : 'menu_right',
         selector : '#sideWrap2',
-        file : 'assets/menu_right.html',
+        file : 'assets/html/menu_right.html',
       },
       {
         name : 'content',
