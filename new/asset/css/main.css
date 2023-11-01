@@ -1,0 +1,7 @@
+main{
+  /* height : calc(100vh - var(--header-height) - var(--menu-height) - var(--footer-height)); */
+  margin:0 auto;
+  padding:0;
+  width : var(--min-width);
+}
+

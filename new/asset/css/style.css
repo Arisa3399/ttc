@@ -1,0 +1,40 @@
+@import "header.css";
+@import "menu.css";
+@import "footer.css";
+@import "main.css";
+
+
+:root{
+  --color-1 : #063F7B;
+  --color-2 : #137FC4;
+  --color-3 : #1AB132;
+  --color-4 : #FFDE8D;
+  --color-5 : #C1E7FF;
+  --color-bg-1 : #EDF8FF;
+  --color-bg-2 : #F0FFED;
+  --color-bg-3 : #FFFAED;
+
+  --color-6-1 : #A2DBFF;
+  --color-6-2 : #58ACE2;
+  --color-7-1 : #A1DD78;
+  --color-7-2 : #65C423;
+  --color-8-1 : #FFD89A;
+  --color-8-2 : #FDAD2B;
+
+  --min-width : 1000px;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing : border-box;
+     -moz-box-sizing : border-box;
+       -o-box-sizing : border-box;
+      -ms-box-sizing : border-box;
+          box-sizing : border-box;
+}
+
+body{
+  margin:0;
+  min-width : var(--min-width);
+}
+
+
