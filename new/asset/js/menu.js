@@ -74,7 +74,8 @@ export class Menu{
     return queries.p || null
   }
   get_url_queries(href){
-    return Object.fromEntries(new URLSearchParams(href))
+    const [url,query] = href.split('?')
+    return Object.fromEntries(new URLSearchParams(query || ''))
   }
 
   set_active(){
@@ -88,6 +89,7 @@ export class Menu{
       const queries = this.get_url_queries(elm.getAttribute('href'))
       const p = queries.p || ''
       const f = queries.f || ''
+      // console.log(queries,"page_name:",page_name,"p:",p , "filename:",file_name,"f:",f)
       if(page_name === p && file_name === f){
         elm.setAttribute('data-status' , 'active')
         // 子階層の場合、階層を開く
