@@ -15,3 +15,14 @@ footer img.link{
   width:220px;
   height:auto;
 }
+
+footer a.site-change{
+  text-decoration:none;
+  color:black;
+  background-color:white;
+  padding:10px;
+  font-size:0.8em;
+}
+footer a.site-change:hover{
+  opacity:0.5;
+}
