@@ -1,0 +1,13 @@
+.past .lists{
+  display:flex;
+  /* gap:10px; */
+  flex-direction:column;
+  margin:20px auto;
+  width:500px;
+  max-width:100%;
+}
+.past .lists > *{
+  list-style:square;
+  border-bottom:1px solid #ccc;
+  padding:10px;
+}
