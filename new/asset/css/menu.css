@@ -26,6 +26,9 @@ li{
   --size-padding:20px;
 
   background-color:#063F7B;
+
+  position:sticky;
+  top:0;
 }
 .menu *{
   font-size:0.95em;

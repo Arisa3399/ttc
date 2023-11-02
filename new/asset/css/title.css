@@ -1,0 +1,23 @@
+main p.title{
+  font-size:1.8em;
+  text-align:center;
+  color:#137FC4;
+  border-bottom:2px solid #137FC4;
+  position:relative;
+  padding-bottom:10px;
+
+  width: var(--min-width);
+  margin: 0 auto 50px;
+}
+main p.title::after{
+  content:"";
+  display:block;
+  width:2em;
+  height:1.2em;
+  background-color:#137FC4;
+  position:absolute;
+  left:50%;
+  top:100%;
+  transform:translate(-50%,0);
+  clip-path:polygon(0 0, 100% 0, 50% 100%);
+}
