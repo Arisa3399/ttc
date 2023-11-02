@@ -1,0 +1,31 @@
+.past .lists{
+  display:flex;
+  /* gap:10px; */
+  flex-direction:column;
+  margin:20px auto;
+  width:500px;
+  max-width:100%;
+}
+.past .lists > *{
+  list-style:square;
+  border-bottom:1px solid #ccc;
+  padding:10px;
+}
+
+section.other table{
+  width:100%;
+  margin:20px;
+  border-collapse:collapse;
+}
+section.other table th,
+section.other table td{
+  border:1px solid #063F7B;
+  padding:10px;
+  font-size:0.8em;
+}
+
+section.other table thead th{
+  background-color:#063F7B;
+  color:white;
+  font-weight:normal;
+}

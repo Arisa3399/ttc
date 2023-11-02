@@ -1,0 +1,17 @@
+:root{
+  --footer-height: 100px;
+}
+
+footer{
+  height:var(--footer-height);
+  background-color: var(--color-1);
+  display:flex;
+  padding:10px;
+  justify-content:center;
+  align-items:center;
+  gap:30px;
+}
+footer img.link{
+  width:220px;
+  height:auto;
+}
