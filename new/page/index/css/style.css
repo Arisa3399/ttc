@@ -58,6 +58,20 @@ h3::before{
   margin-right:10px;
 }
 
+section.greet .flex{
+  gap:20px;
+}
+
+section.greet .flex img{
+  width:250px;
+  height:300px;
+  object-fit:cover;
+}
+section.greet .flex .message{
+  flex:1;
+}
+
+
 section.control-room h3::before{
   background-color:#A2DBFF;
 }
