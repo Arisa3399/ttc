@@ -2,13 +2,16 @@
   function Main(){
     window.submitted = false;
     document.querySelector(`button[name='post']`).addEventListener('click' , click_button)
+    set_iframe()
   }
 
   function set_iframe(){
     const iframe = document.createElement('iframe')
     iframe.id = "complete"
+    iframe.name = "complete"
     iframe.onload = (()=>{
-      if(window.submitted === true){window.location='?p=contact&f=thanks'}
+      const [url , query] = location.href.split('?')
+      if(window.submitted === true){window.location= `${url}?p=contact&f=thanks`}
     })
     document.body.appendChild(iframe)
   }

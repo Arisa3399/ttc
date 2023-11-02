@@ -27,7 +27,7 @@
 }
 .link form[name='contact'] .item[data-required="true"] .required::before{
   content: '必須';
-  background-color:var(--color-menu-1);
+  background-color:var(--color-menu-2);
 }
 .link form[name='contact'] .item p{
   width:120px;
@@ -56,7 +56,8 @@
 }
 
 .link form[name='contact'] .button button{
-  background-color:var(--color-menu-1);
+  background-color:var(--color-menu-2);
+  border:0;
   padding:10px;
   color:white;
   width:150px;
