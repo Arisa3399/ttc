@@ -29,6 +29,7 @@ li{
 
   position:sticky;
   top:0;
+  z-index:100;
 }
 .menu *{
   font-size:0.95em;
@@ -88,20 +89,30 @@ li{
   color:white;
 }
 
-.menu > ul > li.list span::after{
+.menu > ul > li span{
+  position:relative;
+}
+.menu > ul > li span::after{
   content:'';
-  display:inline-block;
-  width:1em;
-  height:1em;
-  border-style:solid;
+  display:block;
+  width:0.6em;
+  height:0.3em;
+  /* border-style:solid;
   border-color:var(--font-menu);
   border-width:0 3px 3px 0;
-  transform:rotate(45deg) scale(0.5);
-  margin-left:5px;
-  vertical-align:text-top;
-  clip-path:polygon();
+  transform:rotate(45deg) scale(0.5); */
+  /* margin-left:5px; */
+  /* vertical-align:text-top; */
+  clip-path:polygon(0 0, 100% 0, 50% 100%);
+  
+  background-color:#d4e1ee;
+  position:absolute;
+  left:50%;
+  top:calc(100% - 5px);
+  transform: translate(-50%, -100%);
 }
-.menu > ul > li.list.lang span::after,
+
+/* .menu > ul > li.list.lang span::after,
 .menu > ul > li.list.lang:hover span::after{
   border-color:black;
 }
@@ -112,26 +123,22 @@ li{
 .menu > ul > li > span[data-status='active'],
 .menu > ul > li > label[data-status='active']{
   font-weight:bold;
-}
+} */
 
 .menu > ul > li > ul > li > a[data-status='active']::before,
 .menu > ul > li > ul > li > label[data-status='active']::before,
 .menu > ul > li > a[data-status='active']::before,
 .menu > ul > li > span[data-status='active']::before,
 .menu > ul > li > label[data-status='active']::before{
-  
-  /* content:'';
+  content:'';
   display:block;
-  width:1.2em;
-  height:1.2em;
-  
+  width:0.3em;
+  height:0.3em;
   position:absolute;
   top:50%;
-  left:5px;
+  left:10px;
   transform:translate(0,-50%);
-  clip-path:polygon(30% 0, 0 50%, 30% 100%, 60% 100%, 30% 50%, 60% 0);
-  mix-blend-mode:difference;
-  background-color:white; */
+  background-color:white;
 }
 
 .menu > ul li.lang{

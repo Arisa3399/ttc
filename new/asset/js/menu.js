@@ -3,7 +3,7 @@ import { Urlinfo } from './urlinfo.js'
 
 export class Menu{
   constructor(){
-    // this.set_lists()
+    this.set_lists()
     this.set_active()
     // this.set_tooltip()
     // // this.hidden_login_bool()
@@ -29,7 +29,7 @@ export class Menu{
   }
 
   get menu_lists(){
-    return document.querySelectorAll('aside a[href], .banner ul.banner-lists')
+    return document.querySelectorAll('.menu a[href]')
   }
 
   set_lists(){
@@ -51,7 +51,7 @@ export class Menu{
     }
     Menu.lists = lists
   }
-  is_current(queries){
+  is_current(queries){console.log(this.page_name,this.file_name)
     if((queries.p || '') === this.page_name
     && (queries.f || '') === this.file_name){
       return true
@@ -79,6 +79,7 @@ export class Menu{
 
   set_active(){
     const page_name = this.page_name || ''
+    const file_name = this.file_name || ''
     const elms = this.menu_lists
     if(!elms){return}
     for(const elm of elms){
@@ -86,10 +87,11 @@ export class Menu{
       if(!href){continue}
       const queries = this.get_url_queries(elm.getAttribute('href'))
       const p = queries.p || ''
-      if(page_name === p){
+      const f = queries.f || ''
+      if(page_name === p && file_name === f){
         elm.setAttribute('data-status' , 'active')
         // 子階層の場合、階層を開く
-        const parent = elm.closest(`.menu > li.list`)
+        const parent = elm.closest(`.menu > ul > li`)
         if(parent){
           const span = parent.querySelector(':scope > span')
           if(span){

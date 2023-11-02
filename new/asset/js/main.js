@@ -1,12 +1,12 @@
 import { Asset }   from './asset.js'
-// import { Menu }    from './menu.js'
+import { Menu }    from './menu.js'
 // import { Lang }    from './lang.js'
 // import { Trigger } from './trigger.js'
 import { SvgImport } from './svg_import.js'
 
 class Main{
   constructor(){
-    // new Menu()
+    new Menu()
     new SvgImport()
     new Asset({
       callback : this.loaded.bind(this)
