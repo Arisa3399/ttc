@@ -1,3 +1,7 @@
 footer{
   background-color: var(--color-menu-2);
 }
+footer a.site-change{
+  background-color:var(--color-menu-1);
+  color:white;
+}
