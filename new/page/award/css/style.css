@@ -14,7 +14,7 @@
 
 section.other table{
   width:100%;
-  margin:20px;
+  margin:20px auto;
   border-collapse:collapse;
 }
 section.other table th,

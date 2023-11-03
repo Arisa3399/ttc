@@ -45,4 +45,6 @@ body{
   overflow:hidden scroll;
 }
 
-
+table{
+  max-width:100%;
+}

@@ -1,0 +1,33 @@
+table.lists{
+  border-collapse:collapse;
+  margin:0 auto;
+}
+
+table.lists th,
+table.lists td{
+  border: 1px solid black;
+  padding:5px 10px;
+  font-size:0.8em;
+  font-weight:normal;
+}
+
+table.lists thead{
+  background-color:var(--color-1);
+}
+table.lists thead th{
+  color:white;
+  
+}
+
+table.lists tbody .num,
+table.lists tbody .award{
+  background-color:var(--color-5);
+}
+
+table.lists tbody{
+  counter-reset: num;
+}
+table.lists tbody tr .num::before{
+  counter-increment: num;
+  content: counter(num);
+}
