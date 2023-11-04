@@ -29,3 +29,14 @@ img{
 .flex{
   display:flex;
 }
+
+@media (max-width:1000px){
+  main section{
+    width : 100%;
+    padding-left:20px;
+    padding-right:20px;
+  }
+  main section .flex{
+    flex-direction:column;
+  }
+}

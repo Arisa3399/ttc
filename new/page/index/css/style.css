@@ -6,6 +6,8 @@ main section.banner{
   scrollbar-width: none;
   -ms-overflow-style: none;
   margin-bottom:50px;
+
+  scroll-snap-type: x mandatory;
 }
 main section.banner::-webkit-scrollbar{
   display: none;
@@ -17,6 +19,9 @@ main section .flex{
 }
 main section.banner img{
   height:100%;
+  object-fit:cover;
+
+  scroll-snap-align: center;
 }
 
 
@@ -144,4 +149,40 @@ section.department-2 .message{
 
 section.control-room p.label{
   color:#5AADE3;
+}
+
+@media (max-width:1000px){
+  section.organization img{
+    width:100%;
+  }
+  section.greet .flex{
+    flex-direction:column;
+  }
+  main section .flex{
+    flex-direction:column;
+  }
+  main section.banner .flex{
+    flex-direction:row;
+  }
+  main section.banner{
+    height:300px;
+    padding-left:0;
+    padding-right:0;
+  }
+  main section.banner img{
+    width:100vw;
+  }
+  section.control-room,
+  section.department-1,
+  section.department-2{
+    padding:20px 20px;
+  }
+  section.control-room .message,
+  section.department-1 .message,
+  section.department-2 .message{
+    padding-left:0;
+  }
+  section.employees table{
+    min-width:auto;
+  }
 }

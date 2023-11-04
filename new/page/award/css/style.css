@@ -29,3 +29,50 @@ section.other table thead th{
   color:white;
   font-weight:normal;
 }
+
+@media(max-width:768px){
+  section.other table{
+    margin:0 auto;
+    width:auto;
+    width:600px;
+    max-width:100%;
+    /* min-width:300px; */
+  }
+  section.other table thead{
+    display:none;
+  }
+  section.other table tbody tr{
+    display:block;
+    margin-bottom:20px;
+  }
+  section.other table tbody tr > *{
+    display:block;
+    border:0;
+    padding-left:20px;
+  }
+  section.other table tbody tr > *.college{
+    background-color:var(--color-1);
+    color:white;
+  }
+
+  section.other table tbody tr > *::before{
+    font-size:0.9em;
+    display:block;
+    font-weight:bold;
+    transform:translateX(-10px);
+  }
+  section.other table tbody tr > *.college::before{
+    /* content: '大学・研究所'; */
+    content: '';
+  }
+  section.other table tbody tr > *.name::before{
+    content: '発表会名称';
+  }
+  section.other table tbody tr > *.date::before{
+    content: '開催日';
+  }
+  section.other table tbody tr > *.url::before{
+    content: 'URL';
+  }
+
+}

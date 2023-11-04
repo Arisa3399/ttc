@@ -26,3 +26,8 @@ section.link li{
   list-style:square;
 }
 
+@media(max-width:1000px){
+  section.link .flex > *{
+    width:100%;
+  }
+}
