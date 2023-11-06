@@ -1,0 +1,91 @@
+table.lists{
+  border-collapse:collapse;
+  margin:0 auto;
+}
+
+table.lists th,
+table.lists td{
+  border: 1px solid black;
+  padding:5px 10px;
+  font-size:0.8em;
+  font-weight:normal;
+}
+
+table.lists thead{
+  background-color:var(--color-1);
+}
+table.lists thead th{
+  color:white;
+  
+}
+
+table.lists tbody .num,
+table.lists tbody .award{
+  background-color:var(--color-5);
+}
+
+table.lists tbody{
+  counter-reset: num;
+}
+table.lists tbody tr .num::before{
+  counter-increment: num;
+  content: counter(num);
+}
+
+@media(max-width:1000px){
+  
+}
+
+
+@media(max-width:500px){
+  table.lists thead{
+    display:none;
+  }
+  table.lists tbody tr{
+    /* border-bottom:1px solid black; */
+    margin-bottom:50px;
+    display:block;
+  }
+  table.lists tbody tr > *{
+    display:block;
+    border:0;
+  }
+  /* table.lists tbody tr > td.award{
+    background-color:transparent;
+  } */
+  table.lists tbody tr > *.num{
+    background-color:var(--color-1);
+    color:white;
+    text-align:left;
+  }
+  table.lists tbody tr > *:not(.num)::before{
+    display:block;
+    font-size:0.9em;
+    margin-right:10px;
+    margin-bottom:5px;
+    padding:5px;
+    border-radius:8px;
+    transform:translate(-10px,0);
+    font-weight:bold;
+
+    /* width:50%;
+    background-color:black;
+    color:white;
+    text-align:center; */
+  }
+  table.lists tbody tr > *.date::before{
+    content: '日付';
+  }
+  table.lists tbody tr > *.award::before{
+    content: '学会名・受賞名';
+  }
+  table.lists tbody tr > *.name::before{
+    content: '名前';
+  }
+  table.lists tbody tr > *.Affiliation::before{
+    content: '所属';
+  }
+  table.lists tbody tr > *.class::before{
+    content: '受賞時の階級';
+  }
+}

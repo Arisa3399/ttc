@@ -1,13 +1,9 @@
 .DS_Store
 Thumbs.db
 
-trash/
-data/
-plugins/
-
+trash/*
+data/*
 
 *.bak
 
 .vscode
-
-

@@ -1,0 +1,111 @@
+.link form[name='contact']{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  width:80%;
+  margin:0 auto;
+}
+
+.link form[name='contact'] .item{
+  display: flex;
+  align-items:start;
+  /* justify-content:start; */
+}
+
+.link form[name='contact'] .item .required{
+  width:100px;
+}
+.link form[name='contact'] .item .required::before{
+  content: '任意';
+  display:block;
+  width:100%;
+  padding:10px;
+  background-color:#BCBCBC;
+  color:white;
+  text-align:center;
+  font-size:0.7em;
+}
+.link form[name='contact'] .item[data-required="true"] .required::before{
+  content: '必須';
+  background-color:var(--color-menu-1);
+}
+.link form[name='contact'] .item p{
+  width:120px;
+  text-align:center;
+  margin:0;
+  font-size:0.8em;
+  padding:10px;
+}
+.link form[name='contact'] .item .row{
+  flex:1;
+}
+.link form[name='contact'] .item .row > *{
+  width:100%;
+  height:100%;
+  resize:none;
+  padding:10px;
+  outline:none;
+  border:1px solid black;
+}
+.link form[name='contact'] .item .row > *::placeholder{
+  color:#bbb;
+  font-size:0.8em;
+}
+.link form[name='contact'] .item .row > textarea{
+  height:200px;
+}
+
+.link form[name='contact'] .button button{
+  background-color:var(--color-menu-1);
+  padding:10px;
+  color:white;
+  width:150px;
+  font-size:0.7em;
+  margin:20px auto;
+  display:block;
+  cursor:pointer;
+}
+.link form[name='contact'] .button button:hover{
+  opacity:0.5;
+}
+
+.error:empty{
+  display:none;
+}
+.error{
+  border:1px dashed red;
+  padding:20px;
+  margin:0 auto 50px;
+  width:80%;
+  color:red;
+  font-size:0.8em;
+}
+
+iframe{
+  display:none;
+}
+
+@media(max-width:1000px){
+  .link form[name='contact']{
+    width:100%;
+  }
+  .link form[name='contact'] .item{
+    flex-direction:column;
+    align-items: normal;
+    display:block;
+  }
+
+  .link form[name='contact'] .item .required{
+    display:inline-block;
+    width:60px;
+  }
+  .link form[name='contact'] .item p{
+    display:inline-block;
+    text-align:left;
+  }
+  .link form[name='contact'] .item .input{
+    display:block;
+    margin-top:10px;
+  }
+}
+
