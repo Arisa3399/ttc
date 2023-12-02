@@ -20,6 +20,9 @@ class College{
   loaded_ip(e){
     if(!e || !e.target || !e.target.response){return}
     this.ip = e.target.response.split("\n")
+    for(let i=0; i<this.ip.length; i++){
+      this.ip[i] = this.adjustment_ip(this.ip[i])
+    }
     this.check()
   }
   // 許可IPにマッチするか確認
@@ -37,7 +40,8 @@ class College{
     let flg = false
     for(const ip of this.ip){
       if(!ip){continue}
-      const reg = RegExp(`^${ip}`)
+      const ip3 = this.adjustment_ip(ip)
+      const reg = RegExp(`^${ip3}`)
       if(user_info.ip.match(reg)){
         
         flg = true
@@ -51,6 +55,15 @@ class College{
       this.error()
     }
   }
+  adjustment_ip(ip){
+    if(!ip){return null}
+    const num4 = ip.split(".")
+    for(let i=0; i<num4.length; i++){
+      num4[i] = ("00"+num4[i]).slice(-3)
+    }
+    return num4.join(".")
+  }
+
   // 許可されている場合、正常表示
   init(){
     new Menu()

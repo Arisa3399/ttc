@@ -1,0 +1,68 @@
+<link rel='stylesheet' href='page/{{page_name}}/css/request.css'/>
+<script type='module' src='page/{{page_name}}/js/main.js'></script>
+
+<div class='spacer'></div>
+
+<p class='title'>掲載依頼</p>
+<section class='link'>
+  <div class='error'></div>
+    
+  <form method='post' name='contact' 
+  action='https://docs.google.com/forms/d/e/1FAIpQLSflfJ7DaBmSbE-kZZXuUEtre2r1CIdgWtabUzW3BFlrhijgYQ/formResponse'
+  target='complete'  
+  onsubmit='window.submitted=true'>
+
+    <div class='item' data-required="true">
+      <div class='required'></div>
+      <p data-lang='ja'>氏名</p>
+      <div class='row'>
+        <input type='text' data-name='name' name='entry.1273577796' placeholder='your name'/>
+      </div>
+    </div>
+
+    <div class='item' data-required="true">
+      <div class='required'></div>
+      <p data-lang='ja'>所属</p>
+      <div class='row'>
+        <input type='text' data-name='belong' name='entry.168871536' placeholder='所属'/>
+      </div>
+    </div>
+
+    <div class='item' data-required="true">
+      <div class='required'></div>
+      <p data-lang='ja'>アドレス</p>
+      <div class='row'>
+        <input type='email' data-name='mail' name='entry.1676594784' placeholder='mail@exmple.com'/>
+      </div>
+    </div>
+
+    <div class='item' data-required="true">
+      <div class='required'></div>
+      <p data-lang='ja'>掲載URL</p>
+      <div class='row'>
+        <input type='url' data-name='url' name='entry.952698441' placeholder='https://example.com'/>
+      </div>
+    </div>
+    
+    <div class='item' data-required="true">
+      <div class='required'></div>
+      <p data-lang='ja'>内容</p>
+      <div class='row'>
+        <textarea name='entry.927810767' data-name='memo' placeholder=''></textarea>
+      </div>
+    </div>
+
+    <div class='button'>
+      <button type='button' name='post' data-lang='ja'>送信</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- <iframe 
+  id="complete" 
+  name="complete" 
+  style="display:none;" 
+  onload="if(submitted){window.location='?p=contact&f=thanks'}"></iframe> -->
+
+<div class='spacer'></div>
