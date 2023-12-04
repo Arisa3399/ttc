@@ -17,6 +17,8 @@ Author : Yugeta.Koji
 ```
 
 # 外部公開サイトと内部のみ閲覧できるサイトに分けてセキュリティ構築する。
+- IPアドレス制御を実装
+  - 以前サイトでは、apacheの.htaccessで実装していたが、今回はPHP(api)+javascriptで行う。
 
 # アクセス制御用のAPIを設置
 - http://www.ttc.t.u-tokyo.ac.jp/api/api.php
