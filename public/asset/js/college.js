@@ -93,7 +93,7 @@ class College{
 
   // 許可されていない場合、topに戻る
   error(){
-    location.href = './'
+    // location.href = './'
   }
 }
 
