@@ -1,0 +1,188 @@
+main section.banner{
+  width:100%;
+  height:250px;
+  display:flex;
+  overflow:auto hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin-bottom:50px;
+
+  scroll-snap-type: x mandatory;
+}
+main section.banner::-webkit-scrollbar{
+  display: none;
+}
+
+main section .flex{
+  display:flex;
+  gap:10px;
+}
+main section.banner img{
+  height:100%;
+  object-fit:cover;
+
+  scroll-snap-align: center;
+}
+
+
+section.organization img{
+  width:80%;
+  display:block;
+  margin-left:auto;
+}
+
+h2{
+  color:#063F7B;
+  font-size:1.5em;
+  font-weight:normal;
+}
+
+h2::before{
+  content:'';
+  display:inline-block;
+  width:1.0em;
+  height:1.0em;
+  background-color:#063F7B;
+  vertical-align:text-top;
+  margin-right:10px;
+}
+
+
+h3{
+  color:black;
+  font-size:1.2em;
+  font-weight:normal;
+}
+h3::before{
+  content:'';
+  display:inline-block;
+  width:1.0em;
+  height:1.0em;
+  background-color:#CCC;
+  vertical-align:text-top;
+  margin-right:10px;
+}
+
+section.greet .flex{
+  gap:20px;
+}
+
+section.greet .flex img{
+  width:250px;
+  height:300px;
+  object-fit:cover;
+}
+section.greet .flex .message{
+  flex:1;
+}
+
+
+section.control-room h3::before{
+  background-color:#A2DBFF;
+}
+section.department-1 h3::before{
+  background-color:#A1DD78;
+}
+section.department-2 h3::before{
+  background-color:#DDC381;
+}
+
+
+section.employees{
+  /* text-align:center; */
+}
+section.employees table{
+  border-collapse:collapse;
+  min-width:300px;
+  max-width:600px;
+  width:100%;
+  margin:0 auto;
+}
+section.employees table *{
+  font-size:0.9em;
+}
+section.employees table th,
+section.employees table td{
+  border:1px solid #063F7B;
+  padding:5px 10px;
+  font-weight:normal;
+}
+section.employees table thead th{
+  background-color:#063F7B;
+  color:white;
+}
+section.employees table tbody th,
+section.employees table tfoot td{
+  background-color:#E2F0FF;
+  color:#063F7B;
+}
+section.employees table td{
+  text-align:center;
+}
+
+
+section.control-room{
+  background-color:#EDF8FF;
+  padding:20px 50px;
+}
+section.department-1{
+  background-color:#F0FFED;
+  padding:20px 50px;
+}
+section.department-2{
+  background-color:#FFFAED;
+  padding:20px 50px;
+}
+section.control-room img,
+section.department-1 img,
+section.department-2 img{
+  width:300px;
+}
+
+section.control-room .message,
+section.department-1 .message,
+section.department-2 .message{
+  padding-left: calc(1.0em + 10px);
+  font-size:0.9em;
+  line-height:2;
+}
+
+section.control-room p.label{
+  color:#5AADE3;
+}
+
+@media (max-width:1000px){
+  section.organization img{
+    width:100%;
+  }
+  section.greet .flex{
+    flex-direction:column;
+  }
+  main section .flex{
+    flex-direction:column;
+  }
+  main section.banner .flex{
+    flex-direction:row;
+  }
+  main section.banner{
+    height:300px;
+    padding-left:0;
+    padding-right:0;
+  }
+  main section.banner img{
+    width:100vw;
+  }
+  section.control-room,
+  section.department-1,
+  section.department-2{
+    padding:20px 20px;
+  }
+  section.control-room .message,
+  section.department-1 .message,
+  section.department-2 .message{
+    padding-left:0;
+  }
+  section.employees table{
+    min-width:auto;
+  }
+}

@@ -1,0 +1,40 @@
+:root{
+  --footer-height: 100px;
+}
+
+footer{
+  height:var(--footer-height);
+  background-color: var(--color-1);
+  display:flex;
+  padding:10px;
+  justify-content:center;
+  align-items:center;
+  gap:30px;
+}
+footer img.link{
+  width:220px;
+  height:auto;
+}
+
+footer a.site-change{
+  text-decoration:none;
+  color:black;
+  background-color:var(--color-menu-2);
+  padding:10px;
+  font-size:0.8em;
+  text-align:center;
+}
+footer a.site-change:hover{
+  opacity:0.5;
+}
+
+@media (max-width:1000px){
+  footer{
+    flex-direction:column;
+    height:auto;
+    padding:30px 0;
+  }
+  footer a.site-change{
+    width:220px;
+  }
+}

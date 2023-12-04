@@ -1,0 +1,17 @@
+.humans{
+  display:flex;
+  gap:10px;
+}
+
+.humans .img{
+  width:200px;
+}
+
+@media(max-width:1000px){
+  .humans{
+    flex-direction:column;
+  }
+  .humans > *{
+    margin-bottom:30px;
+  }
+}
