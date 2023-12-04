@@ -2,8 +2,11 @@
 Thumbs.db
 
 trash/*
-data/*
+data/
+**/data
+public/data/
 
 *.bak
+data/files
 
 .vscode
