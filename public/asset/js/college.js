@@ -52,7 +52,8 @@ class College{
       this.init()
     }
     else{
-      this.error()
+      this.init()
+      // this.error()
     }
   }
   adjustment_ip(ip){
