@@ -70,6 +70,7 @@ li{
 .menu > ul > li:hover > span{
   color:white;
   cursor:pointer;
+
 }
 
 /* Sub Menu */
@@ -260,6 +261,10 @@ li{
   .menu > ul > li span:not([data-status="active"]):hover{
     color:var(--color-menu-2);
   }
+  .menu > ul > li a:not([data-status="active"]):hover svg,
+  .menu > ul > li span:not([data-status="active"]):hover svg{
+    fill:var(--color-menu-2);
+  }
   /* .menu > ul > li > *:hover::before{
     content:'';
     display:block;
@@ -292,4 +297,11 @@ input#hamburger[type='checkbox']:not(:checked) ~ .menu{
   background-color : #1c8d2f;
 }
 
+
+.menu svg{
+  fill:white;
+}
+.menu svg.lock{
+  margin-right:5px;
+}
 
