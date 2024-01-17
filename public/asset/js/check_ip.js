@@ -10,7 +10,7 @@ export class CheckIp{
   // 許可IPの読み込み
   load_ip(){
     const xhr = new XMLHttpRequest()
-    xhr.open('get' , "data/ip.json" , true)
+    xhr.open('get' , "asset/ip.json" , true)
     xhr.setRequestHeader('Content-Type', 'text/json');
     xhr.onload = this.loaded_ip.bind(this)
     xhr.send()
@@ -18,10 +18,10 @@ export class CheckIp{
 
   loaded_ip(e){
     if(!e || !e.target || !e.target.response){return}
-    this.ip = e.target.response.split("\n")
-    for(let i=0; i<this.ip.length; i++){
-      this.ip[i] = this.adjustment_ip(this.ip[i])
-    }
+    this.ip = JSON.parse(e.target.response)
+    // for(let i=0; i<this.ip.length; i++){
+    //   this.ip[i] = this.adjustment_ip(this.ip[i])
+    // }
     this.check()
   }
 
