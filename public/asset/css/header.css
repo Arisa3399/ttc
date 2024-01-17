@@ -1,0 +1,82 @@
+@import 'hamburger.css';
+
+:root{
+  --header-height: 60px;
+}
+
+header{
+  padding-left  : calc((100vw - var(--min-width)) / 2);
+  padding-right : calc((100vw - var(--min-width)) / 2);
+  background-color:white;
+}
+
+header{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  height:var(--header-height);
+}
+header > *{
+  height: 100%;
+  margin:0;
+  padding:0;
+}
+
+header .title{
+  display:flex;
+  align-items:center;
+  font-size: 1.8em;
+  font-weight:normal;
+  padding:0 10px;
+  white-space:nowrap;
+}
+
+/* Logo */
+header > *:nth-child(2){
+  margin-left:auto;
+}
+header .logo{
+  padding:10px;
+}
+header .logo a{
+  display:block;
+  height:100%;
+}
+header .logo img,
+header .logo svg{
+  height:100%;
+}
+
+header .title{
+  font-size:2.0em;
+}
+
+@media (max-width:1000px){
+  header{
+    box-shadow:4px 4px 10px rgba(0,0,0,0.5);
+    position:sticky;
+    top:0;
+    z-index:100;
+  }
+  header .title{
+    font-size:1.2em;
+    text-align:center;
+    flex:1;
+    display:block;
+    padding: 5px 12px;
+    max-width:calc(100vw - 50px);
+    white-space:pre-wrap;
+  }
+  header .logo{
+    display:none;
+  }
+}
+
+@media (max-width:500px){
+  header .title{
+    font-size:1.0em;
+    padding: 5px 10px;
+  }
+}
+
+
