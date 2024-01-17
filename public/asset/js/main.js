@@ -3,6 +3,7 @@ import { Menu }    from './menu.js'
 // import { Lang }    from './lang.js'
 // import { Trigger } from './trigger.js'
 import { SvgImport } from './svg_import.js'
+import { CheckIp }   from "./check_ip.js"
 
 class Main{
   constructor(){
@@ -12,6 +13,7 @@ class Main{
       callback : this.loaded.bind(this)
     })
     // new Lang()
+    new CheckIp()
   }
   get html(){
     return document.querySelector('html')
@@ -36,7 +38,9 @@ switch(document.readyState){
   case 'complete':
   case 'interactive':
     new Main()
-    break
+  break
+
   default:
     window.addEventListener('DOMContentLoaded' , (()=>new Main()))
+  break
 }

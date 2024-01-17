@@ -1,13 +1,10 @@
 import { Asset }   from './asset.js'
 import { Menu }    from './menu.js'
-// import { Lang }    from './lang.js'
-// import { Trigger } from './trigger.js'
 import { SvgImport } from './svg_import.js'
 
-export class College{
-  constructor(){
+export class CheckIp{
+  constructor(){console.log(1)
     this.load_ip()
-    // new Lang()
   }
 
   // 許可IPの読み込み
@@ -21,24 +18,23 @@ export class College{
 
   loaded_ip(e){
     if(!e || !e.target || !e.target.response){return}
-    // this.ip = e.target.response.split("\n")
+    this.ip = JSON.parse(e.target.response)
     // for(let i=0; i<this.ip.length; i++){
     //   this.ip[i] = this.adjustment_ip(this.ip[i])
     // }
-    this.ip = JSON.parse(e.target.response)
-    // console.log(this.ip)
     this.check()
   }
 
-  // 許可IPにマッチするか確認
+  // アクセスユーザー情報の取得（サーバー問い合わせ）
   check(){
     const xhr = new XMLHttpRequest()
     xhr.open('get' , "http://www.ttc.t.u-tokyo.ac.jp/api/api.php" , true)
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onload = this.checked.bind(this)
     xhr.send()
-    // this.init()
   }
+
+  // 許可IPにマッチするか確認
   checked(e){
     if(!e || !e.target || !e.target.response){return}
     const user_info = JSON.parse(e.target.response)
@@ -48,16 +44,19 @@ export class College{
       const ip3 = this.adjustment_ip(ip)
       const reg = RegExp(`^${ip3}`)
       if(user_info.ip.match(reg)){
-        
         flg = true
         break
       }
     }
+
+    // IPマッチ
     if(flg){
       this.init()
     }
+
+    // IPアンマッチ
     else{
-      this.init()
+      // this.init()
       // this.error()
     }
   }
@@ -73,11 +72,15 @@ export class College{
 
   // 許可されている場合、正常表示
   init(){
-    new Menu()
-    new SvgImport()
-    new Asset({
-      callback : this.loaded.bind(this)
-    })
+    const elms = document.querySelectorAll(".site-change")
+    for(const elm of elms){
+      elm.style.setProperty("display","block","")
+    }
+    // new Menu()
+    // new SvgImport()
+    // new Asset({
+    //   callback : this.loaded.bind(this)
+    // })
   }
 
 
@@ -102,14 +105,4 @@ export class College{
   error(){
     // location.href = './'
   }
-}
-
-
-switch(document.readyState){
-  case 'complete':
-  case 'interactive':
-    new College()
-    break
-  default:
-    window.addEventListener('DOMContentLoaded' , (()=>new College()))
 }
