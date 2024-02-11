@@ -1,5 +1,5 @@
 :root{
-  --menu-height: 60px;
+  --menu-height: 50px;
 }
 
 /* div.menu{
@@ -120,10 +120,14 @@ li{
 }
 
 /* Active */
-.menu > ul > li a[data-status='active'],
+/* .menu > ul > li a[data-status='active'],
 .menu > ul > li span[data-status='active']{
   background-color:var(--color-menu-2);
   color:black;
+} */
+.menu > ul > li a[data-status='active'],
+.menu > ul > li span[data-status='active']{
+  color:var(--color-menu-2);
 }
 
 
