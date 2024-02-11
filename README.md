@@ -8,7 +8,7 @@ Author : Yugeta.Koji
 # Summary
 - 東京大学大学院工学系研究科 技術部のサイトをリニューアル構築する。
 - 運用をgitベースで行うように設計（サイズの大きなデータアップロードはFTPを利用）
-- 
+- 元URL: http://www.ttc.t.u-tokyo.ac.jp/index.html
 
 
 # topページのニュース記事数
@@ -55,5 +55,7 @@ SHA256:DoVCPPJ/fjDZSQHKQ+ePQdo0kuNn0XWtJOGLiH19QeA geta1972@gmail.com
 ```
 
 3. 
+
+
 
 
