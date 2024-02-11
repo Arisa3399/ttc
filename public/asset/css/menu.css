@@ -120,11 +120,6 @@ li{
 }
 
 /* Active */
-/* .menu > ul > li a[data-status='active'],
-.menu > ul > li span[data-status='active']{
-  background-color:var(--color-menu-2);
-  color:black;
-} */
 .menu > ul > li a[data-status='active'],
 .menu > ul > li span[data-status='active']{
   color:var(--color-menu-2);
@@ -269,6 +264,7 @@ li{
   .menu > ul > li span:not([data-status="active"]):hover svg{
     fill:var(--color-menu-2);
   }
+
   /* .menu > ul > li > *:hover::before{
     content:'';
     display:block;

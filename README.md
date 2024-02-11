@@ -11,20 +11,19 @@ Author : Yugeta.Koji
 - 
 
 
-# URL
-
-
 # topページのニュース記事数
 - 以下の箇所の、data-count属性の値最新（日付の新しい記事の表示を行う仕様）を変更することで記事数が変えられる。
 ```
 <ul class='lists' data-count="5"></ul>
 ```
 
-
 # 外部公開サイトと内部のみ閲覧できるサイトに分けてセキュリティ構築する。
 - IPアドレス制御を実装
   - 以前サイトでは、apacheの.htaccessで実装していたが、今回はPHP(api)+javascriptで行う。
 
+=======
+# 外部公開サイトと内部のみ閲覧できるサイトに分けてセキュリティ構築する。
+>>>>>>> main
 
 # アクセス制御用のAPIを設置
 - http://www.ttc.t.u-tokyo.ac.jp/api/api.php
@@ -37,6 +36,7 @@ Author : Yugeta.Koji
   "uri": "/api.php", 
   "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" 
 }
+
 ```
 
 
@@ -55,4 +55,5 @@ SHA256:DoVCPPJ/fjDZSQHKQ+ePQdo0kuNn0XWtJOGLiH19QeA geta1972@gmail.com
 ```
 
 3. 
+
 

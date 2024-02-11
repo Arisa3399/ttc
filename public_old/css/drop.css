@@ -1,0 +1,237 @@
+body{ /* 全体設定 */
+	margin:0px;
+	padding:0px;
+	}
+.menu{ /* メニュー全体設定 */
+	position:ralative;		/* ralative, absolute */
+	vertical-align:middle;
+	}
+
+/* ----- 左側メニュー用 ----------------------------------- */
+.main2 *{ /* 縦型メニュー全体設定 */
+	margin:0px;
+	padding:0px;
+	list-style:none;
+	display:block;
+	}
+.main2{ /* 縦型メニュー一段目全体設定 */
+	margin:0px;
+	padding:0px;
+	text-align:center;
+	font-family:sans-serif;
+	position:absolute;		/* relative, absolute */
+/*	border-top:0px solid #ccc;*/
+	color:#fff;
+	}
+.main2 a{ /* 縦型メニュー一段目リンク部設定 */
+	text-decoration:none;
+	background-image:url("../images/o_menu_1.jpg");	/* 背景画像の指定 */
+	letter-spacing:2px;
+/*	vertical-align:middle;*/
+/*	font-weight:bold; */	/* 文字太さ指定. normal, bold */
+	}
+.main2 a:link,
+.main2 a:visited{ /* 縦型メニュー一段目リンク部設定 */
+/*	color:#00f; */
+	color:#fff;
+/*	background-image:url("../images/o_menu_1.jpg"); */	/* 背景画像の指定 */
+	background-repeat:no-repeat;
+	}
+.main2 a:hover{ /* 縦型メニュー一段目マウスオーバー設定 */
+	color:#fff;
+	background-image:url("../images/o_menu_1c.jpg");	/* 背景画像の指定 */
+	}
+.main2 li{ /* 縦型メニュー一段目リスト設定 */
+	width:160px;
+	height:40px;
+	line-height:40px;
+/*	background-color:#fff; */
+/*	background-image:url("../images/o_menu_1.jpg");*/	/* 背景画像の指定 */
+	background-repeat:no-repeat;
+/*	border-right:0px solid #ccc;*/
+/*	border-bottom:0px solid #ccc;*/
+	float:left;
+	}
+.main2 li.on{ /* 縦型メニュー一段目リスト展開時設定 */
+/*	background-color:#eef; */
+/*	background-image:url("../images/o_menu_1c.jpg"); */	/* 背景画像の指定 */
+	background-repeat:no-repeat;
+	}
+.main2 li.off{ /* 縦型メニュー一段目リスト未展開時設定 */
+	position:relative;
+	float:left;
+	overflow:hidden;
+	}
+.sub3{ /* 縦型メニュー二段目全体設定 */
+	position:relative;
+	text-align:left;
+	left:0%;
+	top:0%;
+	}
+.sub3 li{ /* 縦型メニュー二段目リスト設定 */
+	width:160px;
+/*	background-color:#ddf; */
+	background-repeat:no-repeat;
+/*	background-position:right; */
+	}
+.sub3 a{ /* 縦型メニュー二段目リンク部設定 */
+	padding-left:10px;
+/*	background-image:url("../images/o_menu_1_.jpg");*/	/* 背景画像の指定 */
+	background-repeat:no-repeat;
+/*	background-position:right; */
+	background-position:left;
+	letter-spacing:1px;
+	}
+.sub3 a:hover{ /* 縦型メニュー二段目マウスオーバー設定 */
+	color:#fff;
+/*	background-image:url("../images/o_menu_1c_.jpg");*/	/* 背景画像の指定 */
+/*	background-color:#ccf; */
+	}
+.sub3 li.on2{ /* 縦型メニュー二段目リスト展開時設定 */
+/*	background-color:#bbf; */
+	overflow:visible;
+	}
+.sub3 li.off2{ /* 縦型メニュー三段目リスト未展開時設定 */
+	position:relative;
+	overflow:hidden;
+	}
+.sub4{ /* 縦型メニュー三段目全体設定 */
+	position:relative;
+	left:100%;
+	top:-40px;
+	}
+.sub4 li{ /* 縦型メニュー三段目リスト設定 */
+	width:160px;
+/*	background-color:#bbf; */
+	background-repeat:no-repeat;
+	}
+.sub4 a:hover{ /* 縦型メニュー三段目マウスオーバー設定 */
+	color:#fff;
+/*	background-color:#aaf; */
+	background-repeat:no-repeat;
+	}
+/* 縦型メニュー時使用 -----*/
+.main2{
+	width:1%;
+	}
+.sub3{
+    left:100%;
+    top:-40px;
+}
+/* ----- 以上,左側メニュー用 ------------------------------ */
+
+/* ----- 右側メニュー用 ----------------------------------- */
+.main3 *{ /* 縦型メニュー全体設定 */
+	margin:0px;
+	padding:0px;
+	list-style:none;
+	display:block;
+	}
+.main3{ /* 縦型メニュー一段目全体設定 */
+	margin:0px;
+	padding:0px;
+	text-align:center;
+	font-family:sans-serif;
+	/* position:absolute; */	/* relative, absolute */
+/*	border-top:0px solid #ccc;*/
+	color:#fff;
+	}
+.main3 a{ /* 縦型メニュー一段目展開有部設定 */
+	text-decoration:none;
+	background-image:url("../images/o_menu_2.jpg");	/* 背景画像の指定 */
+	letter-spacing:1px;
+/*	padding-left:5px; */
+/*	color:#fff; */
+/*	font-weight:bold; */	/* 文字太さ指定. normal, bold */
+	}
+.main3 a:link,
+.main3 a:visited{ /* 縦型メニュー一段目リンク部設定 */
+	color:#fff;
+/*	background-image:url("../images/o_menu_2.jpg"); */	/* 背景画像の指定 */
+	background-repeat:no-repeat;
+/*	background-position:right; */
+	}
+.main3 a:hover{ /* 縦型メニュー一段目リンク部マウスオーバー設定 */
+	background-image:url("../images/o_menu_2c.jpg");	/* 背景画像の指定 */
+	color:#fff;
+	}
+.main3 li{ /* 縦型メニュー一段目リスト設定 */
+	width:160px;
+	height:40px;
+	line-height:40px;
+/*	background-color:#fff; */
+/*	background-image:url("../images/o_menu_2.jpg");*/	/* 背景画像の指定 */
+	background-repeat:no-repeat;
+/*	background-position:left; */
+/*	border-right:0px solid #ccc;*/
+/*	border-bottom:0px solid #ccc;*/
+	float:left;
+	}
+.main3 li.on{ /* 縦型メニュー一段目リスト展開時設定 */
+/*	background-color:#efe; */
+/*	background-image:url("../images/o_menu_2.jpg");*/	/* 背景画像の指定 */
+	background-repeat:no-repeat;
+/*	background-position:left; */
+	}
+.main3 li.off{ /* 縦型メニュー一段目リスト未展開時設定 */
+	position:relative;
+	float:left;
+	overflow:hidden;
+	}
+.sub5{ /* 縦型メニュー二段目全体設定 */
+	position:relative;
+	text-align:right;
+	right:0%;
+	top:0%;
+	}
+.sub5 li{ /* 縦型メニュー二段目リスト設定 */
+	width:160px;	/* 下方にある「.sub5」の数字も合わせる */
+/*	background-color:#dfd; */
+	background-repeat:no-repeat;
+/*	background-position:left; */
+	}
+.sub5 a{ /* 縦型メニュー二段目リンク部設定 */
+/*	position:relative;*/
+	padding-right:7px;
+/*	background-image:url("../images/o_menu_2_.jpg");*/	/* 背景画像の指定 */
+	background-repeat:no-repeat;
+/*	background-position:left; */
+	letter-spacing:1px;
+	}
+.sub5 a:hover{ /* 縦型メニュー二段目リンク部マウスオーバー設定 */
+	color:#fff;
+/*	background-image:url("../images/o_menu_2c_.jpg");*/	/* 背景画像の指定 */
+/*	background-color:#cfc; */
+	}
+.sub5 li.on2{ /* 縦型メニュー二段目リスト展開時設定 */
+/*	background-color:#cfc; */
+	overflow:visible;
+	}
+.sub5 li.off2{ /* 縦型メニュー三段目リスト未展開時設定 */
+	position:relative;
+	overflow:hidden;
+	}
+.sub6{ /* 縦型メニュー三段目全体設定 */
+	position:relative;
+	right:100%;
+	top:-40px;
+	}
+.sub6 li{ /* 縦型メニュー三段目リスト設定 */
+	width:160px;
+/*	background-color:#bfb; */
+	background-repeat:no-repeat;
+	}
+.sub6 a:hover{ /* 縦型メニュー三段目マウスオーバー設定 */
+	color:#fff;
+/*	background-color:#afa; */
+	background-repeat:no-repeat;
+	}
+/* 縦型メニュー時使用 -----*/
+.main3{
+	width:1%;
+	}
+.sub5{
+    right:160px;	/* 二段目の幅に合わせる */
+    top:-40px;
+}
+/* ----- 以上,右側メニュー用 ----------------------------------- */

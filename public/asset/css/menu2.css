@@ -36,7 +36,6 @@
   color:white;
 }
 
-
 @media (min-width:769px){
   /* link-Hover */
   .menu > ul > li a:not([data-status="active"]):hover,

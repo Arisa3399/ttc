@@ -82,7 +82,6 @@ export class SvgImport{
     svg = SvgImport.remove_style(svg)
     elm.parentNode.insertBefore(svg , elm)
     elm.parentNode.removeChild(elm)
-    console.log(elm)
   }
 
   static load_img(elm , src){
