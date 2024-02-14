@@ -18,6 +18,7 @@ export class CheckIp{
 
   loaded_ip(e){
     if(!e || !e.target || !e.target.response){return}
+    // console.log(e.target.response)
     this.ip = JSON.parse(e.target.response)
     // for(let i=0; i<this.ip.length; i++){
     //   this.ip[i] = this.adjustment_ip(this.ip[i])
@@ -42,6 +43,7 @@ export class CheckIp{
     for(const ip of this.ip){
       if(!ip){continue}
       const ip3 = this.adjustment_ip(ip)
+      console.log(ip3)
       const reg = RegExp(`^${ip3}`)
       if(user_info.ip.match(reg)){
         flg = true
