@@ -13,10 +13,10 @@ jobs:
       - name: Deploy
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          port: ${{ secrets.SSH_PORT }}
-          passphrase: ${{ secrets.SSH_PASS }}
+          host: www.ttc.t.u-tokyo.ac.jp
+          username: webpark1684
+          port: 22
+          passphrase: ZePfrj9Q
           script: |
-            cd ${{ secrets.SERVER_DEPLOY_DIR }}
+            cd /home/webpark1684/www/ttc
             git pull origin main
