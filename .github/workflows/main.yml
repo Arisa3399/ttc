@@ -16,7 +16,7 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           port: ${{ secrets.SSH_PORT }}
-          key: |-
+          key: |
             -----BEGIN OPENSSH PRIVATE KEY-----
               b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAACFwAAAAdzc2gtcn
               NhAAAAAwEAAQAAAgEA37n/95odJiu6sVVV539urZ5hjp3orD7p/+cwIjlBTjf5Zn7nTFdk
