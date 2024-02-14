@@ -39,18 +39,18 @@ export class CheckIp{
   checked(e){
     if(!e || !e.target || !e.target.response){return}
     const user_info = JSON.parse(e.target.response)
+    const my_ip = this.adjustment_ip(user_info.ip)
     let flg = false
     for(const ip of this.ip){
       if(!ip){continue}
       const ip3 = this.adjustment_ip(ip)
-      console.log(ip3)
       const reg = RegExp(`^${ip3}`)
-      if(user_info.ip.match(reg)){
+      if(my_ip.match(reg)){
         flg = true
         break
       }
     }
-
+console.log("ip-match", flg, user_info, ip3)
     // IPマッチ
     if(flg){
       this.init()
@@ -67,7 +67,7 @@ export class CheckIp{
     if(!ip){return null}
     const num4 = ip.split(".")
     for(let i=0; i<num4.length; i++){
-      num4[i] = ("00"+num4[i]).slice(-3)
+      num4[i] = ("000"+ num4[i]).slice(-3)
     }
     return num4.join(".")
   }
