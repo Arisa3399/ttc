@@ -13,7 +13,7 @@ jobs:
       - name: Deploy
         uses: appleboy/ssh-action@master
         with:
-          host: www.ttc.t.u-tokyo.ac.jp
+          host: webpark1684@www.ttc.t.u-tokyo.ac.jp
           username: webpark1684
           port: 22
           passphrase: ZePfrj9Q
