@@ -18,5 +18,5 @@ jobs:
           port: 22
           passphrase: ZePfrj9Q
           script: |
-            cd /home/webpark1684/www/ttc
+            cd ./www/ttc
             git pull origin main
