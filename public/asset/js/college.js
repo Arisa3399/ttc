@@ -4,6 +4,7 @@ import { Menu }    from './menu.js'
 // import { Trigger } from './trigger.js'
 import { SvgImport } from './svg_import.js'
 
+
 export class College{
   constructor(){
     this.load_ip()
@@ -21,12 +22,7 @@ export class College{
 
   loaded_ip(e){
     if(!e || !e.target || !e.target.response){return}
-    // this.ip = e.target.response.split("\n")
-    // for(let i=0; i<this.ip.length; i++){
-    //   this.ip[i] = this.adjustment_ip(this.ip[i])
-    // }
-    this.ip = JSON.parse(e.target.response)
-    // console.log(this.ip)
+    this.ip = e.target.response.split("\n")
     this.check()
   }
 
@@ -39,6 +35,7 @@ export class College{
     xhr.send()
     // this.init()
   }
+
   checked(e){
     if(!e || !e.target || !e.target.response){return}
     const user_info = JSON.parse(e.target.response)
@@ -48,7 +45,6 @@ export class College{
       const ip3 = this.adjustment_ip(ip)
       const reg = RegExp(`^${ip3}`)
       if(user_info.ip.match(reg)){
-        
         flg = true
         break
       }
@@ -100,7 +96,7 @@ export class College{
 
   // 許可されていない場合、topに戻る
   error(){
-    // location.href = './'
+    location.href = './'
   }
 }
 
