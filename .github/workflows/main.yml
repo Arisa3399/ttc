@@ -1,0 +1,71 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          port: ${{ secrets.SSH_PORT }}
+          key: |
+            -----BEGIN OPENSSH PRIVATE KEY-----
+            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
+            -----END OPENSSH PRIVATE KEY-----
+          script: |
+            cd ${{ secrets.SERVER_DEPLOY_DIR }}
+            git pull origin main

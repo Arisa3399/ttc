@@ -1,10 +1,15 @@
 .DS_Store
 Thumbs.db
 
+<<<<<<< HEAD
 trash/
 data/
 **/data
 public/data/
+=======
+trash/*
+data/*
+>>>>>>> main
 
 *.bak
 data/files

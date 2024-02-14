@@ -31,9 +31,11 @@
 /* Active */
 .menu > ul > li a[data-status='active'],
 .menu > ul > li span[data-status='active']{
-  background-color:var(--color-menu-1);
+  /* background-color:var(--color-menu-1);
+  color:white; */
   color:white;
 }
+
 @media (min-width:769px){
   /* link-Hover */
   .menu > ul > li a:not([data-status="active"]):hover,
