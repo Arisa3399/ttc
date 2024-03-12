@@ -50,7 +50,7 @@ export class CheckIp{
         break
       }
     }
-console.log("ip-match", flg, user_info, this.ip)
+// console.log("ip-match", flg, user_info, this.ip)
     // IPマッチ
     if(flg){
       this.init()
