@@ -3,7 +3,7 @@ import { Menu }    from './menu.js'
 import { SvgImport } from './svg_import.js'
 
 export class CheckIp{
-  constructor(){console.log(1)
+  constructor(){
     this.load_ip()
   }
 
@@ -29,7 +29,7 @@ export class CheckIp{
   // アクセスユーザー情報の取得（サーバー問い合わせ）
   check(){
     const xhr = new XMLHttpRequest()
-    xhr.open('get' , "http://www.ttc.t.u-tokyo.ac.jp/api/api.php" , true)
+    xhr.open('get' , "https://www.ttc.t.u-tokyo.ac.jp/api/api.php" , true)
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onload = this.checked.bind(this)
     xhr.send()
