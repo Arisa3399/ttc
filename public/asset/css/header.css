@@ -28,7 +28,14 @@ header .title{
   font-size: 1.8em;
   font-weight:normal;
   padding:0 10px;
+  margin:0;
+  border:0;
   white-space:nowrap;
+  color:black;
+}
+header .title::before,
+header .title::after{
+  content:"";
 }
 
 /* Logo */
@@ -44,7 +51,7 @@ header .logo a{
 }
 header .logo img,
 header .logo svg{
-  height:100%;
+  height:auto;
 }
 
 header .title{

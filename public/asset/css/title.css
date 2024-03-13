@@ -1,5 +1,7 @@
+h1,
 main p.title{
   font-size:1.8em;
+  font-weight:normal;
   text-align:center;
   color:#137FC4;
   border-bottom:2px solid #137FC4;
@@ -10,6 +12,7 @@ main p.title{
   margin: 0 auto 50px;
   padding:0 10px;
 }
+h1::after,
 main p.title::after{
   content:"";
   display:block;
@@ -24,6 +27,7 @@ main p.title::after{
 }
 
 @media (max-width:1000px){
+  h1,
   main p.title{
     width: 100%;
     font-size:1.4em;

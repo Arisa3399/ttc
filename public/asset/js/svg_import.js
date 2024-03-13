@@ -1,44 +1,54 @@
+/**
+ * SVG読み込み処理
+ * 
+ * # attributeは、保持される。
+ * - ただし、svg内部にかかれているattributeが優先される。
+ * 
+ * # styleを保持する
+ * <svg data-style-flg='1'></svg>
+ */
+
 export class SvgImport{
   constructor(options){
     this.options = options || {}
-    this.root = this.options.root || document.body
     this.init()
   }
 
-  get targets(){
-    return this.root.querySelectorAll('img , svg[src]')
+  static get targets(){
+    return document.querySelectorAll('img , svg[src]')
   }
 
-  get mime(){
+  static get mime(){
     return 'image/svg+xml'
   }
   
   init(){
-    for(const target of this.targets){
+    // console.log(SvgImport.targets);return
+    for(const target of SvgImport.targets){
       const src = target.getAttribute('src')
-      const ext = this.get_ext(src)
+      const ext = SvgImport.get_ext(src)
       if(!ext || ext.toLowerCase() !== 'svg'){continue}
       switch(target.nodeName){
         case 'svg':
-          this.load_svg(target , src)
+          SvgImport.load_svg(target , src)
           target.removeAttribute('src')
           break
-        // case 'img':
-        //   this.load_img(target , src)
-        //   break
+        case 'img':
+          SvgImport.load_img(target , src)
+          break
       }
     }
   }
 
-  load_svg(elm , src , callback){
-    this.datas = this.datas || []
-    if(typeof this.datas[src] !== 'undefined'){
+  static load_svg(elm , src , callback){
+    SvgImport.datas = SvgImport.datas || []
+    if(typeof SvgImport.datas[src] !== 'undefined'){
       if(callback){
-        callback(this.datas[src])
+        callback(SvgImport.datas[src])
       }
       else{
-        this.loaded_svg(elm , {
-          target:{response:this.datas[src]}
+        SvgImport.loaded_svg(elm , {
+          target:{response:SvgImport.datas[src]}
         })
       }
       return 
@@ -46,35 +56,53 @@ export class SvgImport{
 
     const xhr = new XMLHttpRequest()
     xhr.open('get' , src , true)
-    xhr.setRequestHeader('Content-Type', this.mime);
-    xhr.onload = this.loaded_svg.bind(this , elm)
+    xhr.setRequestHeader('Content-Type', SvgImport.mime);
+    xhr.onreadystatechange = ((elm , e) => {
+      if(xhr.readyState !== XMLHttpRequest.DONE){return}
+      const status = xhr.status;
+      if (status === 0 || (status >= 200 && status < 400)) {
+        SvgImport.datas[src] = e.target.response
+        if(callback){
+          callback(e.target.response)
+        }
+        else{
+          SvgImport.loaded_svg(elm , e)
+        }
+      // }
+      // else {
+      //   SvgImport.loaded_svg(elm , e)
+      }
+    }).bind(this , elm)
     xhr.send()
   }
-  loaded_svg(elm , res){
+  static loaded_svg(elm , res){
     if(!res || !res.target.response){return}
     const parser = new DOMParser()
-    let svg = parser.parseFromString(res.target.response, this.mime).querySelector('svg')
-    this.copy_attributes(elm , svg)
-    svg = this.remove_style(svg)
+    let svg = parser.parseFromString(res.target.response, SvgImport.mime).querySelector('svg')
+    SvgImport.copy_attributes(elm , svg)
+    svg = SvgImport.remove_style(svg)
     elm.parentNode.insertBefore(svg , elm)
     elm.parentNode.removeChild(elm)
+    // console.log(elm)
   }
 
-  // load_img(elm , src){
+  static load_img(elm , src){
 
-  // }
+  }
 
-  get_ext(file){
+  static get_ext(file){
     if(!file){return}
     const sp = file.split("#")[0].split('?')[0].split('.')
     return sp[sp.length-1]
   }
 
-  create_svg(){
+  static create_svg(){
     return document.createElementNS('http://www.w3.org/2000/svg' , 'svg')
   }
 
-  remove_style(svg){
+  static remove_style(svg){
+    const style_tag_flg = svg.getAttribute('data-style-flg')
+    if(style_tag_flg){return svg}
     var styles = svg.getElementsByTagName("style");
     for(var i=styles.length-1; i>=0; i--){
       styles[i].parentNode.removeChild(styles[i]);
@@ -82,7 +110,7 @@ export class SvgImport{
     return svg
   }
 
-  copy_attributes(target , new_svg){
+  static copy_attributes(target , new_svg){
     if(!target || !new_svg){return}
     const attributes = target.attributes
     if(!attributes || !attributes.length){return}
@@ -91,8 +119,8 @@ export class SvgImport{
     }
   }
 
-  get_svg(elm , src , callback){
-    const svg = this.load_svg(elm , src , callback)
+  static get_svg(elm , src , callback){
+    const svg = SvgImport.load_svg(elm , src , callback)
   }
 
 }

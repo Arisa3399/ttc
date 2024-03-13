@@ -3,7 +3,7 @@ import { Menu }    from './menu.js'
 import { SvgImport } from './svg_import.js'
 
 export class CheckIp{
-  constructor(){console.log(1)
+  constructor(){
     this.load_ip()
   }
 
@@ -18,6 +18,7 @@ export class CheckIp{
 
   loaded_ip(e){
     if(!e || !e.target || !e.target.response){return}
+    // console.log(e.target.response)
     this.ip = JSON.parse(e.target.response)
     // for(let i=0; i<this.ip.length; i++){
     //   this.ip[i] = this.adjustment_ip(this.ip[i])
@@ -28,7 +29,7 @@ export class CheckIp{
   // アクセスユーザー情報の取得（サーバー問い合わせ）
   check(){
     const xhr = new XMLHttpRequest()
-    xhr.open('get' , "http://www.ttc.t.u-tokyo.ac.jp/api/api.php" , true)
+    xhr.open('get' , "https://www.ttc.t.u-tokyo.ac.jp/api/api.php" , true)
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onload = this.checked.bind(this)
     xhr.send()
@@ -38,17 +39,18 @@ export class CheckIp{
   checked(e){
     if(!e || !e.target || !e.target.response){return}
     const user_info = JSON.parse(e.target.response)
+    const my_ip = this.adjustment_ip(user_info.ip)
     let flg = false
     for(const ip of this.ip){
       if(!ip){continue}
       const ip3 = this.adjustment_ip(ip)
       const reg = RegExp(`^${ip3}`)
-      if(user_info.ip.match(reg)){
+      if(my_ip.match(reg)){
         flg = true
         break
       }
     }
-
+// console.log("ip-match", flg, user_info, this.ip)
     // IPマッチ
     if(flg){
       this.init()
@@ -65,7 +67,7 @@ export class CheckIp{
     if(!ip){return null}
     const num4 = ip.split(".")
     for(let i=0; i<num4.length; i++){
-      num4[i] = ("00"+num4[i]).slice(-3)
+      num4[i] = ("000"+ num4[i]).slice(-3)
     }
     return num4.join(".")
   }

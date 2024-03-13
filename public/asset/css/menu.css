@@ -1,5 +1,5 @@
 :root{
-  --menu-height: 60px;
+  --menu-height: 50px;
 }
 
 /* div.menu{
@@ -122,8 +122,7 @@ li{
 /* Active */
 .menu > ul > li a[data-status='active'],
 .menu > ul > li span[data-status='active']{
-  background-color:var(--color-menu-2);
-  color:black;
+  color:var(--color-menu-2);
 }
 
 
@@ -265,6 +264,7 @@ li{
   .menu > ul > li span:not([data-status="active"]):hover svg{
     fill:var(--color-menu-2);
   }
+
   /* .menu > ul > li > *:hover::before{
     content:'';
     display:block;
@@ -303,5 +303,7 @@ input#hamburger[type='checkbox']:not(:checked) ~ .menu{
 }
 .menu svg.lock{
   margin-right:5px;
+  width:20px;
+  height:20px;
 }
 

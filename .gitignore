@@ -1,12 +1,9 @@
 .DS_Store
 Thumbs.db
 
-trash/
-data/
-**/data
-public/data/
+trash/*
+data/*
 
 *.bak
-data/files
 
 .vscode

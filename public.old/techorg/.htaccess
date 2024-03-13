@@ -1,6 +1,0 @@
-DirectoryIndex index.html index.htm index.shtml index.php index.cgi tech_org.html .ht
-AuthUserFile /home/webpark1684/www/techorg/.htpasswd
-AuthType Basic
-AuthName "Web access"
-Satisfy all
-Order deny,allow

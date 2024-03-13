@@ -8,7 +8,7 @@ import { CheckIp }   from "./check_ip.js"
 class Main{
   constructor(){
     new Menu()
-    new SvgImport()
+    
     new Asset({
       callback : this.loaded.bind(this)
     })
@@ -30,6 +30,7 @@ class Main{
     if(this.loading){
       this.loading.style.setProperty('display','none','')
     }
+    new SvgImport()
   }
 }
 
