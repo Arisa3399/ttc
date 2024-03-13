@@ -1,4 +1,4 @@
-// import { SvgImport } from './svg_import.js'
+import { SvgImport } from './svg_import.js'
 
 export class Asset{
   constructor(options){
@@ -148,27 +148,35 @@ export class Asset{
   set_script(scripts){
     if(!scripts || !scripts.length){return}
     const target_script = scripts.shift()
-    if(target_script.getAttribute('src')){
+    if(target_script.closest("svg")){
+      this.set_script(scripts)
+    }
+    else if(target_script.getAttribute('src')){
       this.set_script_src(target_script , scripts)
     }
     else{
       this.set_script_inner(target_script , scripts)
     }
   }
-  set_script_src(berfore_script , scripts){
+  set_script_src(before_script , scripts){
     const new_script = document.createElement('script')
     new_script.onload = (scripts => {
       this.set_script(scripts)
     }).bind(this , scripts)
-    this.copy_attributes(berfore_script , new_script)
+    this.copy_attributes(before_script , new_script)
     new_script.setAttribute('data-set',1)
-    berfore_script.parentNode.insertBefore(new_script , berfore_script)
-    berfore_script.parentNode.removeChild(berfore_script)
+    before_script.parentNode.insertBefore(new_script , before_script)
+    before_script.parentNode.removeChild(before_script)
   }
-  set_script_inner(berfore_script , scripts){
-    const script_value = berfore_script.textContent
-    Function('(' + script_value + ')')();
-    this.set_script(scripts)
+  set_script_inner(before_script , scripts){
+    const script_value = before_script.textContent
+    try{
+      Function('(' + script_value + ')')();
+      this.set_script(scripts)
+    }
+    catch(err){
+      console.warn(err)
+    }
   }
   copy_attributes(before_elm , after_elm){
     if(!before_elm || !after_elm){return}

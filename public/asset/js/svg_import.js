@@ -23,6 +23,7 @@ export class SvgImport{
   }
   
   init(){
+    // console.log(SvgImport.targets);return
     for(const target of SvgImport.targets){
       const src = target.getAttribute('src')
       const ext = SvgImport.get_ext(src)
@@ -82,7 +83,7 @@ export class SvgImport{
     svg = SvgImport.remove_style(svg)
     elm.parentNode.insertBefore(svg , elm)
     elm.parentNode.removeChild(elm)
-    console.log(elm)
+    // console.log(elm)
   }
 
   static load_img(elm , src){
