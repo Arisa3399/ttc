@@ -63,16 +63,53 @@ export class Asset{
     document.body.setAttribute('data-page-name' , Asset.page_name)
   }
 
+  // async html_load(){
+  //   const path = `page/${Asset.page_name}/${Asset.file_name}.html`
+  //   const response = await fetch(path)
+  //   // console.log(response,response.body);
+  //   const text = await response.text();
+  //   const html = Asset.convert_html(text)
+  //   const main = this.get_main(html)
+  //   this.check_load_modules(main)
+  //   Asset.main.parentNode.replaceChild(main, Asset.main)
+  //   // this.menu_load()
+  //   if(Asset.page_name === 'index'){
+  //     // Asset.top_menu.innerHTML = Asset.aside_menu.querySelector(':scope > ul').innerHTML
+  //     // Asset.aside_menu.style.display = 'none'
+  //   }
+
+  //   this.set_scripts(Asset.main)
+  //   // new SvgImport()
+
+  //   this.module_loaded(e)
+  //   // console.log(html);
+  // }
+
+
   html_load(){
     this.module_loading()
     const xhr = new XMLHttpRequest()
+    // xhr.withCredentials = true
     xhr.open('get' , `page/${Asset.page_name}/${Asset.file_name}.html` , true)
-    xhr.setRequestHeader('Content-Type', 'text/html');
+    xhr.setRequestHeader('Content-Type', 'text/html')
+    // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
     xhr.onload = this.html_loaded.bind(this)
+    // xhr.onreadystatechange = (e => {
+    //   if(xhr.readyState !== XMLHttpRequest.DONE){return}
+    //   const status = xhr.status;
+    //   if (status === 0 || (status >= 200 && status < 400)) {
+    //     this.html_loaded(e)
+    //   }
+    //   else {
+    //     this.options.file = 'assets/html/404.html'
+    //     new Asset(this.options)
+    //   }
+    // }).bind(this)
     xhr.send()
   }
 
   html_loaded(e){
+// console.log(e.target.responseText)
     const html = Asset.convert_html(e.target.response)
     const main = this.get_main(html)
     this.check_load_modules(main)

@@ -1,0 +1,20 @@
+
+.menu-title{
+	font-size:1.8em;
+	font-weight:normal;
+	display:flex;
+	gap:10px;
+	align-items:center;
+	margin:20px;
+	padding:0;
+}
+
+.menu-title svg{
+	background-color:#063F7B;
+	fill:white;
+	width:100%;
+	height:100%;
+	padding:10px;
+	width:60px;
+	height:60px;
+}

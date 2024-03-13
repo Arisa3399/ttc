@@ -35,3 +35,11 @@ h3::before{
     font-size:1.2em;
   }
 }
+
+
+.center{
+  text-align:center;
+}
+.hidden{
+  display:none;
+}
