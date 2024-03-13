@@ -113,7 +113,7 @@ li{
   transform: translate(-50%, -100%);
 }
 .menu > ul > li span[data-status="active"]::after{
-  background-color:black;
+  background-color:white;
 }
 .menu > ul > li span:not([data-status="active"]):hover::after{
   background-color:var(--color-menu-2);
