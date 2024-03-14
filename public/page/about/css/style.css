@@ -1,0 +1,63 @@
+.sub-title{
+	padding:3px 10px;
+	text-align:center;
+	margin:0;
+}
+
+section.frame{
+  padding:70px 50px 20px;
+	position:relative;
+}
+
+section > .sub-title{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:40px;
+	text-align:center;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	font-size:1.2em;
+}
+
+section.unei{
+	background-color:#EDF8FF;
+}
+section.unei .sub-title{
+	background-color:#A2DBFF;
+}
+section.unei h3::before{
+	background-color:#A2DBFF;
+}
+
+section.bumon{
+	background-color:#F0FFED;
+}
+section.bumon .sub-title{
+	background-color:#A1DD78;
+}
+section.bumon h3::before{
+	background-color:#A1DD78;
+}
+
+section.koshukai{
+	background-color:#FFFAED;
+}
+section.koshukai .sub-title{
+	background-color:#FED89A;
+}
+section.koshukai h3::before{
+	background-color:#FED89A;
+}
+
+section.frame .flex{
+	gap:50px;
+}
+section.frame img{
+	width:300px;
+}
+
+
+

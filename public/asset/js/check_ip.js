@@ -82,7 +82,7 @@ export class CheckIp{
   // 許可されている場合、正常表示
   init(){
     const elms = document.querySelectorAll(".site-change")
-    console.log(elms)
+    // console.log(elms)
     for(const elm of elms){
       elm.style.setProperty("display","block","")
     }
