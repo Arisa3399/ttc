@@ -3,7 +3,7 @@ section.link .flex{
   justify-content:center;
 }
 section.link .flex > *{
-  width:50%;
+  width:600px;
 }
 
 section.link p{
