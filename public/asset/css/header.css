@@ -36,6 +36,7 @@ header .title{
 header .title::before,
 header .title::after{
   content:"";
+  display:none;
 }
 
 /* Logo */

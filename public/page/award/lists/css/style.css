@@ -1,0 +1,17 @@
+
+
+.lists{
+  display:inline-block;
+}
+.lists > *{
+  list-style: square;
+}
+
+
+.toggle.links{
+  margin-left:50px;
+  text-align:left;
+}
+.toggle.links > *{
+  display:block;
+}

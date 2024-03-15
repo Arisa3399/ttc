@@ -89,7 +89,7 @@ export class Asset{
   html_load(){
     this.module_loading()
     const xhr = new XMLHttpRequest()
-    // xhr.withCredentials = true
+    xhr.withCredentials = true
     xhr.open('get' , `page/${Asset.page_name}/${Asset.file_name}.html` , true)
     xhr.setRequestHeader('Content-Type', 'text/html')
     // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
