@@ -186,3 +186,11 @@ section.control-room p.label{
     min-width:auto;
   }
 }
+
+.svg-links{
+  display:flex;
+  gap:10px;
+  margin:20px 0;
+  align-items:center;
+  justify-content:center;
+}
