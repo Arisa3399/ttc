@@ -9,6 +9,10 @@ Author : Yugeta.Koji
 - 次のjsonファイルを更新することで、リストが反映されます。
 - public/data/news.json
 
+# 受賞一覧の更新
+- 次のjsonファイルを更新することで、リストが反映されます。
+- public/data/news_awards.json
+
 
 # リンクページの更新
 - 以下のhtmlファイルを書き換えることで反映されます。
@@ -23,5 +27,13 @@ Author : Yugeta.Koji
 - GoogleFormでデータ送信がされるので、送信を受け取りたい人はGoogleFormの共有設定をして貰う必要があります。
 - GoogleFormログ用スプレッドシート
   - https://docs.google.com/spreadsheets/d/198EaWGyEXcHruJUBV6AUI6PBOvd0CtzH2a2_zZcq5UY/edit?resourcekey&usp=forms_web_b#gid=86149542
+- 上部メニュー「ツール」「通知設定」「通知を編集」で以下の設定を行う。
+  - 「ユーザーがフォームを送信した時」「メール・その都度」
+
+
+# 掲載依頼の問い合わせについて
+- GoogleFormでデータ送信がされるので、送信を受け取りたい人はGoogleFormの共有設定をして貰う必要があります。
+- GoogleFormログ用スプレッドシート
+  - https://docs.google.com/spreadsheets/d/1429Qv3RFc2lA564kIGXjzc81TGklHsKAbWQbx2jN5wk/edit?resourcekey#gid=2115565585
 - 上部メニュー「ツール」「通知設定」「通知を編集」で以下の設定を行う。
   - 「ユーザーがフォームを送信した時」「メール・その都度」
