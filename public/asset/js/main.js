@@ -7,13 +7,14 @@ import { CheckIp }   from "./check_ip.js"
 
 class Main{
   constructor(){
+    new CheckIp()
     new Menu()
     
     new Asset({
       callback : this.loaded.bind(this)
     })
     // new Lang()
-    new CheckIp()
+    
   }
   get html(){
     return document.querySelector('html')

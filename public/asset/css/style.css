@@ -1,5 +1,6 @@
 @import "header.css";
 @import "menu.css";
+@import "menu_title.css";
 @import "footer.css";
 @import "main.css";
 @import "title.css";
@@ -57,4 +58,12 @@ table{
   body{
     min-width:auto;
   }
+}
+
+.hr{
+  width: var(--min-width);
+  max-width:100%;
+  height:0px;
+  margin:30px auto;
+  border-bottom:1px dashed #137FC4;
 }

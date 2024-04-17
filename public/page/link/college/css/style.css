@@ -1,0 +1,33 @@
+section.link .flex{
+  gap:10px;
+  justify-content:center;
+}
+section.link .flex > *{
+  width:600px;
+}
+
+section.link p{
+  font-size:1.2em;
+}
+section.link p::before{
+  content:'';
+  display:inline-block;
+  width:1.0em;
+  height:1.0em;
+  background-color:#063F7B;
+  vertical-align:text-top;
+  margin-right:10px;
+}
+
+section.link li{
+  margin-left:20px;
+}
+section.link li{
+  list-style:square;
+}
+
+@media(max-width:1000px){
+  section.link .flex > *{
+    width:100%;
+  }
+}

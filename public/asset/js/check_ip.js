@@ -1,10 +1,16 @@
-import { Asset }   from './asset.js'
-import { Menu }    from './menu.js'
+import { Asset }     from './asset.js'
+import { Menu }      from './menu.js'
 import { SvgImport } from './svg_import.js'
+import { Urlinfo }   from './urlinfo.js'
 
 export class CheckIp{
   constructor(){
     this.load_ip()
+  }
+
+  get is_secure_site(){
+    const urlinfo = new Urlinfo()
+    return urlinfo.filename === "college.html" ? true : false
   }
 
   // 許可IPの読み込み
@@ -57,9 +63,10 @@ export class CheckIp{
     }
 
     // IPアンマッチ
-    else{
+    else if(this.is_secure_site){
+      // this.redirect_root()
       // this.init()
-      // this.error()
+      this.error()
     }
   }
 
@@ -75,6 +82,7 @@ export class CheckIp{
   // 許可されている場合、正常表示
   init(){
     const elms = document.querySelectorAll(".site-change")
+    // console.log(elms)
     for(const elm of elms){
       elm.style.setProperty("display","block","")
     }
@@ -105,6 +113,7 @@ export class CheckIp{
 
   // 許可されていない場合、topに戻る
   error(){
-    // location.href = './'
+    location.href = 'index.html'
   }
+  
 }

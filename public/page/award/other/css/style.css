@@ -1,0 +1,28 @@
+table.lists{
+  border-collapse:collapse;
+  margin:20px 0;
+}
+
+table.lists th,
+table.lists td{
+  border: 1px solid black;
+  padding:5px;
+  font-size:0.9em;
+}
+
+table.lists th{
+  background-color:#eee;
+  font-size:0.8em;
+  font-weight:normal;
+}
+
+table.lists td.date{
+  text-align:right;
+  font-size:0.8em;
+}
+table.lists td.link{
+  text-align:center;
+}
+table.lists td.link *{
+  font-size:0.8em;
+}
