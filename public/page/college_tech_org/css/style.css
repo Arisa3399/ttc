@@ -1,7 +1,7 @@
 
 h2{
-  color:#063F7B;
-  font-size:1.5em;
+  color:#008000;
+  font-size:1.0em;
   font-weight:normal;
 }
 
@@ -10,7 +10,7 @@ h2::before{
   display:inline-block;
   width:1.0em;
   height:1.0em;
-  background-color:#063F7B;
+  background-color:#008000;
   vertical-align:text-top;
   margin-right:10px;
 }
