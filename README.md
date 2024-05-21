@@ -27,3 +27,7 @@ Author : Yugeta.Koji
 
 # Github
 - https://github.com/Arisa3399/ttc
+
+# 旧サイトアクセス
+- https://www.ttc.t.u-tokyo.ac.jp/index_20240401.html
+

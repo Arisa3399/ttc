@@ -155,3 +155,35 @@ form[name="contact"] .flex-column{
   gap:10px;
 }
 
+/**
+ * File-Upload
+ */
+.upload-file{
+  display:flex;
+  gap:10px;
+  
+}
+
+.upload-file label[for="upload_files"]{
+  background-color:#ddd;
+  font-size:0.8em;
+  cursor:pointer;
+  width:120px!important;
+}
+
+.upload-file label[for="upload_files"]:hover{
+  opacity:0.5;
+}
+
+.upload-file .preview{
+  flex:1;
+  border:1px dashed black;
+  border-style:dashed!important;
+  height:40px!important;
+  margin:0;
+}
+.upload-file .preview:empty{
+  display:block;
+  /* line-height:100%; */
+}
+
