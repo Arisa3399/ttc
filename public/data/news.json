@@ -1,6 +1,14 @@
 [
   {
     "id" : 1,
+    "label" : "学内向け記事",
+    "date"  : "2024-05-22",
+    "title" : "(学内向け記事)",
+    "body"  : "2022年度年報を掲載しました。",
+    "url"   : "https://www.ttc.t.u-tokyo.ac.jp/ttc/public/college.html?p=college_tech_org&f=public"
+  },
+  {
+    "id" : 1,
     "label" : "全体向け記事",
     "date"  : "2024-04-01",
     "title" : "(全体向け記事)",
