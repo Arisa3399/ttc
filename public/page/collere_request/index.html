@@ -7,7 +7,7 @@
 <section class='link'>
   <div class='error'></div>
     
-  <form method='post' name='contact' enctype='multipart/form-data'>
+  <form method='post' name='contact'>
 
     <div class='item' data-required="true">
       <div class='required'></div>
@@ -68,8 +68,8 @@
     <div class='item' data-required="false">
       <div class='required'></div>
       <p data-lang='ja'>ファイル</p>
-      <div class='row'>
-        <input type='file' data-name='file' name='file[]' placeholder='サーバーにアップロードするファイル' multiple/>
+      <div class='row upload-file'>
+        <label for="upload_files">ファイルを選択</label>
         <div class="preview"></div>
       </div>
     </div>
@@ -96,5 +96,9 @@
 
   </form>
 </section>
+
+<form name="upload" enctype='multipart/form-data'>
+<input id="upload_files" type='file' data-name='file' name='file[]' placeholder='サーバーにアップロードするファイル' multiple/>
+</form>
 
 <div class='spacer'></div>

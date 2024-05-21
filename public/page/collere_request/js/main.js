@@ -17,36 +17,50 @@ import { Uuid } from "../../../asset/js/uuid.js"
   }
 
   function change_input_file(e){
-    const preview = document.querySelector(`.preview`)
-    if(!preview){return}
-    const uuid = new Uuid().id
-    preview.innerHTML = ""
-    for(let i=0; i<e.target.files.length; i++){
-      const file = e.target.files[i]
-      const ext = get_ext(file.name)
-      const id = `${uuid}-${i}`
-      switch(ext){
-        case "png":
-        case "jpg":
-        case "jpeg":
-        case "gif":
-        case "webp":
-          const div = document.createElement("div")
-          div.setAttribute("data-uuid" , id)
-          const img = new Image()
-          const url = URL.createObjectURL(file)
-          img.src = url
-          div.appendChild(img)
-          const name = document.createElement("div")
-          name.className = "name"
-          name.textContent = file.name
-          div.appendChild(name)
-          preview.appendChild(div)
-          break
-        case "pdf":
-          break
-      }
+    console.log(e.target.files)
+    // const value = e.target.value.match("\\") ? e.target.value.split("\\").pop() : e.target.value.split("/").pop()
+    // const value = e.target.value.split("/").pop()
+    const value = get_files2value(e.target.files)
+    document.querySelector(`.preview`).textContent = value
+
+    // const preview = document.querySelector(`.preview`)
+    // if(!preview){return}
+    // const uuid = new Uuid().id
+    // preview.innerHTML = ""
+    // for(let i=0; i<e.target.files.length; i++){
+    //   const file = e.target.files[i]
+    //   const ext = get_ext(file.name)
+    //   const id = `${uuid}-${i}`
+    //   switch(ext){
+    //     case "png":
+    //     case "jpg":
+    //     case "jpeg":
+    //     case "gif":
+    //     case "webp":
+    //       const div = document.createElement("div")
+    //       div.setAttribute("data-uuid" , id)
+    //       const img = new Image()
+    //       const url = URL.createObjectURL(file)
+    //       img.src = url
+    //       div.appendChild(img)
+    //       const name = document.createElement("div")
+    //       name.className = "name"
+    //       name.textContent = file.name
+    //       div.appendChild(name)
+    //       preview.appendChild(div)
+    //       break
+    //     case "pdf":
+    //       break
+    //   }
+    // }
+  }
+
+  function get_files2value(files){
+    const lists = []
+    for(const file of files){
+      lists.push(file.name)
     }
+    return lists.join(",")
   }
 
   function get_ext(filename){
@@ -104,7 +118,7 @@ import { Uuid } from "../../../asset/js/uuid.js"
 
   function file_upload(){
     console.log("file_upload")
-    const formData = new FormData(document.forms.contact)
+    const formData = new FormData(document.forms.upload)
     // var files = document.querySelector(`input[type='file'][name='file']`).files;
     // for (let i=0; i<files.length; i++) {
     //   formData.append("file[]", files[i]);
@@ -131,6 +145,8 @@ import { Uuid } from "../../../asset/js/uuid.js"
       value += `# ${i} : ${data.base}\n${url}\n\n`
     }
     document.querySelector(`textarea[data-name="files"]`).value = value
+
+    // uploadデータを除外する
 
     // google-form-submit
     window.submitted = true
