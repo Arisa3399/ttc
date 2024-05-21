@@ -143,3 +143,15 @@ iframe{
     margin-top:10px;
   }
 }
+
+/* 掲載先 */
+form[name='contact'] select{
+  padding:10px;
+  font-size:0.8em;
+}
+form[name="contact"] .flex-column{
+  display:flex;
+  flex-direction:rows;
+  gap:10px;
+}
+
