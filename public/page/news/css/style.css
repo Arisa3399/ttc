@@ -54,7 +54,13 @@ section.news .label::before{
 section.news .label[data-label="学内向け記事"]::before{
   background-color:#FFDE8D;
 }
+section.news .label[data-label="　学　内　"]::before{
+  background-color:#FFDE8D;
+}
 section.news .label[data-label="学外向け記事"]::before{
+  background-color:#C1E7FF;
+}
+section.news .label[data-label="　新　着　"]::before{
   background-color:#C1E7FF;
 }
 

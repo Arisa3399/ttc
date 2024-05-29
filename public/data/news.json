@@ -1,7 +1,7 @@
 [
   {
     "id" : 1,
-    "label" : "全体向け記事",
+    "label" : "　新　着　",
     "date"  : "2024-04-01",
     "title" : "",
     "body"  : "技術部HPデザインをリニューアルしました。",
@@ -9,15 +9,15 @@
   },
   {
     "id" : 2,
-    "label" : "学内向け記事",
+    "label" : "　新　着　",
     "date"  : "2024-04-17",
     "title" : "",
-    "body"  : "本HPに掲載する技術職員の受賞歴を募集しています。受賞した方はリンクのGoogleフォームより自己申告をお願いいたします。",
+    "body"  : "本HPに掲載する本学技術職員の受賞情報を募集しています。受賞した方はリンクのGoogleフォームより自己申告をお願いいたします。",
     "url"   : "https://forms.gle/6GcXG8WTZvJFKyjP6"
   },
   {
     "id" : 3,
-    "label" : "学内向け記事",
+    "label" : "　学　内　",
     "date"  : "2024-05-22",
     "title" : "",
     "body"  : "2022年度年報を掲載しました。",
@@ -25,7 +25,7 @@
   },
   {
     "id" : 4,
-    "label" : "学内向け記事",
+    "label" : "　学　内　",
     "date"  : "2024-05-22",
     "title" : "",
     "body"  : "<a href='https://ttc.t.u-tokyo.ac.jp/ttc/public/college.html?p=college_etc&f=reference'>2024年度 工学系研究科技術部 担当部門名簿を掲載しました。</a>",
