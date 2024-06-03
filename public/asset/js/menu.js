@@ -86,6 +86,7 @@ export class Menu{
     for(const elm of elms){
       const href = elm.getAttribute('href')
       if(!href){continue}
+      if(href.match(/^[http:\/\/|https:\/\/]/)){continue}
       const queries = this.get_url_queries(elm.getAttribute('href'))
       const p = queries.p || ''
       const f = queries.f || ''
