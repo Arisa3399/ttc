@@ -47,20 +47,22 @@ section.news .label::before{
   content:attr(data-label);
   padding:5px 10px;
   width:100px;
+  display:block;
   text-align:center;
   background-color:#ddd;
   font-size:0.8em;
+  white-space:nowrap;
 }
 section.news .label[data-label="学内向け記事"]::before{
   background-color:#FFDE8D;
 }
-section.news .label[data-label="　学　内　"]::before{
+section.news .label[data-label="学内"]::before{
   background-color:#FFDE8D;
 }
 section.news .label[data-label="学外向け記事"]::before{
   background-color:#C1E7FF;
 }
-section.news .label[data-label="　新　着　"]::before{
+section.news .label[data-label="新着"]::before{
   background-color:#C1E7FF;
 }
 
