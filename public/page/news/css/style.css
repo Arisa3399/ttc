@@ -49,7 +49,7 @@ section.news .label::before{
   width:100px;
   display:block;
   text-align:center;
-  background-color:#ddd;
+  background-color:#fffcc1;
   font-size:0.8em;
   white-space:nowrap;
 }
