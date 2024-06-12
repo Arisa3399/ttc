@@ -1,0 +1,104 @@
+[
+  {
+    "img" : "page/award/lists/img/poster_34.jpg",
+    "title" : "第34回 技術発表会",
+    "date"  : "2023年03月13日",
+    "links" : [
+      {
+        "url"  : "https://www.ttc.t.u-tokyo.ac.jp/report/34/files/report_34_outer.pdf",
+        "name" : "第34回技術報告・概要(PDF)",
+        "status" : "public"
+      },
+      {
+        "url"  : "https://www.ttc.t.u-tokyo.ac.jp/internal/tech/files/report_34_inner.pdf",
+        "name" : "第34回技術報告(PDF)(学内)",
+        "status" : "internal"
+      },
+      {
+        "url"  : "https://www.ttc.t.u-tokyo.ac.jp/internal/tech/files/poster_presen_34.pdf",
+        "name" : "ポスター発表(PDF)(学内)",
+        "status" : "internal"
+      },
+      {
+        "url"  : "https://www.ttc.t.u-tokyo.ac.jp/report/34/files/program_34.pdf",
+        "name" : "当日のプログラム(PDF)",
+        "status" : "public"
+      },
+      {
+        "url"  : "https://www.ttc.t.u-tokyo.ac.jp/report/34/files/poster_34.pdf",
+        "name" : "案内ポスター(PDF)",
+        "status" : "public"
+      }
+    ]
+  },
+  {
+    "img" : "page/award/lists/img/poster_34.jpg",
+    "title" : "第33回 技術発表会",
+    "date"  : "2021年03月12日",
+    "links" : [
+      {
+        "url"  : "https://www.ttc.t.u-tokyo.ac.jp/report/33/files/report_33_outer.pdf",
+        "name" : "第33回技術報告・概要(PDF)",
+        "status" : "public"
+      },
+      {
+        "url"  : "https://www.ttc.t.u-tokyo.ac.jp/internal/tech/files/report_33_inner.pdf",
+        "name" : "第33回技術報告(PDF)(学内)",
+        "status" : "internal"
+      },
+      {
+        "url"  : "https://www.ttc.t.u-tokyo.ac.jp/internal/tech/files/poster_presen_33.pdf",
+        "name" : "ポスター発表(PDF)(学内)",
+        "status" : "internal"
+      },
+      {
+        "url"  : "https://www.ttc.t.u-tokyo.ac.jp/report/33/files/program_33.pdf",
+        "name" : "当日のプログラム(PDF)",
+        "status" : "public"
+      },
+      {
+        "url"  : "https://www.ttc.t.u-tokyo.ac.jp/report/33/files/poster_33.pdf",
+        "name" : "案内ポスター(PDF)",
+        "status" : "public"
+      },
+      {
+        "url"  : "https://www.ttc.t.u-tokyo.ac.jp/internal/tech/files/view_33/33th_award_web.pdf",
+        "name" : "各賞受賞報告(PDF)(学内)",
+        "status" : "internal"
+      }
+    ]
+  },
+  {
+    "img" : "page/award/lists/img/poster_34.jpg",
+    "title" : "第32回 技術発表会",
+    "date"  : "2019年03月13日",
+    "links" : [
+      {
+        "url"  : "https://www.ttc.t.u-tokyo.ac.jp/report/32/files/report_32_outer.pdf",
+        "name" : "第32回技術報告・概要(PDF)",
+        "status" : "public"
+      },
+      {
+        "url"  : "https://www.ttc.t.u-tokyo.ac.jp/internal/tech/files/report_32_inner.pdf",
+        "name" : "第32回技術報告(PDF)(学内)",
+        "status" : "internal"
+      },
+      {
+        "url"  : "https://www.ttc.t.u-tokyo.ac.jp/internal/tech/files/poster_presen_32.pdf",
+        "name" : "ポスター発表(PDF)(学内)",
+        "status" : "internal"
+      },
+      {
+        "url"  : "https://www.ttc.t.u-tokyo.ac.jp/report/32/files/program_32.pdf",
+        "name" : "当日のプログラム(PDF)",
+        "status" : "public"
+      },
+      {
+        "url"  : "https://www.ttc.t.u-tokyo.ac.jp/report/32/files/poster_32.pdf",
+        "name" : "案内ポスター(PDF)",
+        "status" : "public"
+      }
+    ]
+  }
+]
+
